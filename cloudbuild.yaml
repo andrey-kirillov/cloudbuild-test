@@ -1,0 +1,5 @@
+steps:
+
+# Pull the Cloud Build Helper, invoke setup to expose shorthand `cloud_build_helper`
+- name: 'gcr.io/cloud-build/docker'
+  args: ['build', '-t', 'myapp', '.']
