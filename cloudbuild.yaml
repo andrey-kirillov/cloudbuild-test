@@ -3,3 +3,6 @@ steps:
 # Pull the Cloud Build Helper, invoke setup to expose shorthand `cloud_build_helper`
 - name: 'gcr.io/cloud-build/docker'
   args: ['build', '-t', '$_GCR_HOSTNAME$/$PROJECT_ID/$_SERVICE_NAME/$_COMMIT_SHA', '.']
+
+options:
+  logging: CLOUD_LOGGING_ONLY  # Option 1: Use Cloud Logging only
